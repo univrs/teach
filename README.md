@@ -1,1 +1,1 @@
-# teach go
+# teach golang
