@@ -16,10 +16,11 @@ func main() {
         fmt.Println(foo.myMap["bar"])  // prints baz
 
         mp := messagePrinter{"printed by printMessage method"}
-        
+        mp.printMessage()  // method use, to print the latter.
+            
         emp := composeMessagePrinter{ messagePrinter{"printed by printMessage composed method"}} 
-        emp.printMessage() 
-        mp.printMessage()  // method use, printed by...
+        emp.printMessage()  // composed method use, to pring the latter.
+    
     
 }
 
