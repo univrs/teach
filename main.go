@@ -1,8 +1,12 @@
 package main
 
-func main() {
-	foo := myStruct{}
+import "fmt"
 
+func main() {
+	foo := myStruct{"bar"}
+        // foo.myField = "bar"
+
+     fmt.Println(foo.myField)
 }
 
 type myStruct struct {
