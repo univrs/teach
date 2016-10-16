@@ -12,8 +12,8 @@ func main() {
         
         foo.myMap["bar"] = "baz"
 
-        fmt.Println(foo.myField)
-        fmt.Println(foo.myMap)
+        fmt.Println(foo.myField)  //  prints foo
+        fmt.Println(foo.myMap["bar"])  // print baz
 }
 
 type myStruct struct {
