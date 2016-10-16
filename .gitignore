@@ -1,0 +1,7 @@
+*.backup
+*.tmp
+*.txt
+/src/
+/bin/
+/vendor/
+
