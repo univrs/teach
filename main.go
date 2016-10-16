@@ -17,14 +17,12 @@ func main() {
 
         mp := messagePrinter{"printed by printMessage method"}
         
-        mp.printMessage()
+        emp := composeMessagePrinter{ messagePrinter{"printed by printMessage composed method"}} 
+        emp.printMessage() 
+        mp.printMessage()  // method use, printed by...
     
 }
 
-type myStruct struct {
-     myMap map[string]string
-     myField string
-}
 
 type messagePrinter struct {
     message string
@@ -33,6 +31,15 @@ type messagePrinter struct {
 func (mp *messagePrinter) printMessage() {
     
     fmt.Println(mp.message)
+}
+
+type composeMessagePrinter struct {
+    messagePrinter 
+}
+
+type myStruct struct {
+     myMap map[string]string
+     myField string
 }
 
 func newMyStruct() *myStruct {
